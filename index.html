@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>Bierouting</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+	<link rel="stylesheet" href="css/osmfixes.css">
+	<link rel="stylesheet" href="css/jquery.mobile.iscrollview.css">
+	<link rel="stylesheet" href="css/jquery.mobile.iscrollview-pull.css">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.3.min.js"></script>
+	<script src="js/iscroll.js"></script>
+	<script src="js/jquery.mobile.iscrollview.js"></script>
+	<script src="js/OpenLayers.mobile.js"></script>
+	<script src="js/mobile_map.js"></script>
+	<script src="js/mobile_jq.js"></script>
+	<script src="js/poilist_bierinseln.js"></script>
+	<!-- <script src="js/poilist_example.js"></script>  -->
+	</head>
+<body>
+
+<div data-role="page" id="mappage">
+	<div data-role="header"><h1>Bierouting</h1></div>
+	<div data-role="content">
+		<div id="map"></div>
+	</div>
+	<div data-role="footer" align="center">
+		<a href="#" id="locate" data-icon="location" data-role="button">Locate</a>
+		<a href="#poiListPanel" data-icon="carat-r" data-role="button">POI List</a>
+		<a href="#" id="show_all_pois" data-icon="grid" data-role="button">Zoom Overview</a>
+		<a href="#" id="add_new_poi" data-icon="plus" data-role="button">Add POI</a>
+		<a href="#" id="calculate_route" data-icon="refresh" data-role="button">Calculate route</a>
+	</div>
+</div>
+
+<div data-role="page" id="poiListPanel">
+	<div data-role="header">
+		<a href="#mappage" class="ui-btn ui-icon-home ui-btn-icon-left">Map</a>
+		<h1>POIs</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<ul data-role="listview" id="poiList" data-inset="false">
+		</ul>
+	</div>
+</div> 
+
+<div id="popup" data-role="dialog">
+	<div data-position="inline" data-theme="d" data-role="header">
+		<h1>Details</h1>
+	</div>
+	<div data-theme="c" data-role="content">
+		<textarea id="popup_textarea" rows="15"></textarea>
+	</div>
+	<div data-poisition="inline" data-theme="d" data-role="footer" align="center">
+		<a href="#" id="popup_close" data-icon="carat-d" data-role="button">close</a>
+	</div>
+</div>
+
+<div id="namepopup" data-role="popup" class="ui-content">
+	<p data-role="content" id="namepopup_content"></p>
+</div>
+
+<div data-role="dialog" id="newpoipopup" class="ui-content" data-transition="flip">
+	<div data-role="header">
+		<h1>Add new POI?</h1>
+	</div>
+	<div data-role="content">
+		<p>Lon: <span id="addnewpoi_lon"></span></p>
+		<p>Lat: <span id="addnewpoi_lat"></span></p>
+		<div class="ui-field-contain">
+			<label for="poiname">Name:</label>
+			<input type="text" name="poiname" id="poiname"></input>
+			<input type="hidden" name="newpoilon" id="newpoilon"></input>
+			<input type="hidden" name="newpoilat" id="newpoilat"></input>
+		</div>
+		<a href="#" data-role="button" data-inline="true" data-rel="back" id="canceladdnewpoi">Cancel</a>
+		<a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" 
+			id="yesaddnewpoi">Add</a>
+	</div>
+</div>
+</body>
+</html>
+
