@@ -45,6 +45,14 @@ permutation is calculated and the shortest one is chose. Theoretically, this
 is also easy, but in practice, this only works up to 10 or 11 locations. 
 After that, the number of permutations is way to big to be computed.
 
+*Update*: Apparently, the problem of optimal beer drinking routes is
+very popular and Michael Trott from WolframAlpha also discussed this in
+the [blog](http://blog.wolframalpha.com/2014/08/19/which-is-closer-local-beer-or-local-whiskey/). As far as I could find out, they use a kind of approximate
+algorithm for bigger problems and an exact dynamic programming or 
+integer programming based solution method for small problems. 
+Unfortunately, I could not find out what exactly the approximate 
+algorithm does or how it works.
+
 License
 =======
 
