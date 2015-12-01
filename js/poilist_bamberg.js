@@ -1,9 +1,3 @@
 initialPoiList = [
-  {
-    name: "Weisses Bräuhaus",
-    active: true,
-    score: 1.0,
-    lat: 48.13643,
-    lon: 11.57849
-  }
+{"name":"Weisses Bräuhaus","active":false,"score":1,"lat":48.13643,"lon":11.57849},{"name":"Brauerei Spezial","active":true,"score":1,"lon":"10.892777900925878","lat":"49.896844474586764"},{"name":"Brauerei Fässla","active":true,"score":1,"lon":"10.892777900925878","lat":"49.89711400863749"},{"name":"Babmberger Weißbierhaus","active":true,"score":1,"lon":"10.895535211792605","lat":"49.89674426282585"},{"name":"Mahr's Bräu","active":true,"score":1,"lon":"10.906414251557687","lat":"49.88988098978405"},{"name":"Brauerei Keesmann","active":true,"score":1,"lon":"10.905641775361477","lat":"49.89039594192232"},{"name":"Klosterbräu","active":true,"score":1,"lon":"10.88691190981024","lat":"49.889145186190156"},{"name":"Schlenkerla","active":true,"score":1,"lon":"10.88501290582789","lat":"49.891681915819355"},{"name":"Café Abseits","active":true,"score":1,"lon":"10.907605152359277","lat":"49.89985142166783"},{"name":"Bahnhof Anreise","active":true,"score":1,"lon":"10.899722140064048","lat":"49.900617468677375"},{"name":"Bahnhof Abreise","active":true,"score":1,"lon":"10.899700682392231","lat":"49.90063820049863"}
 ];
